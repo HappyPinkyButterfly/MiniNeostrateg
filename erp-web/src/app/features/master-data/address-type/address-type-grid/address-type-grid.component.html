@@ -1,0 +1,5 @@
+<generic-grid
+    [columnHeaders]="columnHeaders"
+    [data]="(addressTypes$ | async) || []"
+    (addNew)="onAddNew()"
+/>

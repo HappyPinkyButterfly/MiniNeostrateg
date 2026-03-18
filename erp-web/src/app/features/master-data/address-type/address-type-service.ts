@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {ADDRESS_TYPE_DATA} from "@/app/features/shared/data/address-type-data";
-import {AddressTypeModel} from "@/app/features/shared/models/address-type-model";
+import {AddressType} from "@/app/features/shared/models/address-type";
 import {BehaviorSubject, Observable, of} from "rxjs";
 
 @Injectable({
@@ -9,15 +9,15 @@ import {BehaviorSubject, Observable, of} from "rxjs";
 
 export class AddressTypeService {
 
-    private data: AddressTypeModel[] = ADDRESS_TYPE_DATA;
-    private addressTypesSubject = new BehaviorSubject<AddressTypeModel[]>(this.data);
+    private data: AddressType[] = ADDRESS_TYPE_DATA;
+    private addressTypesSubject = new BehaviorSubject<AddressType[]>(this.data);
     addressTypes$ = this.addressTypesSubject.asObservable();
 
-    getAll():Observable<AddressTypeModel[]>{
+    getAll():Observable<AddressType[]>{
         return this.addressTypes$;
     }
 
-    insert(newType:AddressTypeModel):void {
+    insert(newType:AddressType):void {
         const currentTypes = this.addressTypesSubject.getValue();
         const updatedTypes = [...currentTypes, newType];
         this.addressTypesSubject.next(updatedTypes);

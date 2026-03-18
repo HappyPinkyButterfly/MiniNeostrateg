@@ -1,6 +1,6 @@
-import { AddressTypeModel } from "@/app/features/shared/models/address-type-model";
+import { AddressType } from "@/app/features/shared/models/address-type";
 
-export const ADDRESS_TYPE_DATA: AddressTypeModel[] = [
+export const ADDRESS_TYPE_DATA: AddressType[] = [
     {
         id: "123e4567-e89b-12d3-a456-426614174000",
         code: "HOME",

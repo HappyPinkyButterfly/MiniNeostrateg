@@ -1,6 +1,13 @@
+<div class="card flex justify-start">
+    <p-button
+        label="Add New Record"
+        (click)="onAddNew()"
+    />
+</div>
+
 <div class="card">
     <p-table
-        [value]="addressTypes"
+        [value]="data"
         [columns]="columnHeaders"
     >
         <ng-template #header let-columns>
