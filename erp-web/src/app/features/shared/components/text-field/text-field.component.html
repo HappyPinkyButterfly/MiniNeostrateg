@@ -1,0 +1,16 @@
+<div>
+    <label
+        class="p-3"
+        [class.block]="!sameRow"
+    >
+        {{resolvedLabel}} :
+    </label>
+
+    <input
+        class="field-input border border-black"
+        [(ngModel)]="value"
+        (ngModelChange)="onChange($event)"
+
+    >
+</div>
+

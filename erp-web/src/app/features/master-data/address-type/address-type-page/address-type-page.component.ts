@@ -9,6 +9,7 @@ import {
 @Component({
     selector: 'address-type-page',
     templateUrl: 'address-type-page.component.html',
+    standalone: true,
     imports: [
         AddressTypeGridComponent,
         AddressTypeDialogComponent

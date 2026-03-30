@@ -12,6 +12,7 @@ import {Button} from "primeng/button";
         Button
     ],
     providers: [],
+    standalone: true
 })
 
 export class GenericGridComponent<T> implements OnInit {

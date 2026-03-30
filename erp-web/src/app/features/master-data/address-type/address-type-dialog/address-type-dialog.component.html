@@ -4,6 +4,48 @@
     header="Add New Address Type"
 >
     <form [formGroup]="componentForm">
+        <div class="flex grid-col-12">
+            <div class="col-span-4">
+                <text-field
+                    label="Code"
+                    [sameRow]="true"
+                    [formControl]="componentForm.controls.code"
+                />
+            </div>
 
+            <div class="col-span-4">
+                <text-field
+                    label="Name"
+                    [sameRow]="true"
+                    [formControl]="componentForm.controls.name"
+                />
+            </div>
+
+            <div class="col-span-4">
+                <toggle-switch
+                    label="Active"
+                    [sameRow]="true"
+                    [formControl]="componentForm.controls.active"
+                />
+            </div>
+        </div>
     </form>
+
+    <ng-template pTemplate="footer">
+        <div class=" flex gap-3">
+            <p-button
+                label="Save"
+                (click)="saveDialog()"
+                severity="success"
+            />
+
+            <p-button
+                label="Cancel"
+                (click)="onHide()"
+                severity="danger"
+            />
+        </div>
+    </ng-template>
+
+
 </p-dialog>

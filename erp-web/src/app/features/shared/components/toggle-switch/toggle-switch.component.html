@@ -1,0 +1,17 @@
+<div
+    class="flex items-center -mt-3"
+    [class.flex-row]="sameRow"
+>
+    <label
+        class="p-3"
+        [class.block]="!sameRow"
+    >
+        {{resolvedLabel}} :
+    </label>
+
+    <p-toggle-switch
+        [ngModel]="value"
+    />
+
+</div>
+

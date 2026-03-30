@@ -1,10 +1,15 @@
-<address-type-grid
-    (addNew)="onAddNew()"
-/>
+<div class="p-4">
+    <h2> Address Type </h2>
+
+    <address-type-grid
+        (addNew)="onAddNew()"
+    />
 
 
-<address-type-dialog
-    [visible]="visibleDialog"
-    (visibleChange)="hideDialog($event)"
-/>
+    <address-type-dialog
+        [visible]="visibleDialog"
+        (visibleChange)="hideDialog($event)"
+    />
+</div>
+
 
